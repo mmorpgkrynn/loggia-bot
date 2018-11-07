@@ -15,7 +15,7 @@ client.on('ready', () => {
 client.on('message', message => {
     risposta = '';    
     
-    if (message.content === '/r') {
+    if (message.content = '/r') {
        message.reply('Che dado devo tirare?');
      }
     
