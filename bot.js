@@ -22,7 +22,7 @@ client.on('message', message => {
  
      if (message.content === '!aiuto') {
 
-       message.channel.send('Questi sono i comandi disponibili:');
+       message.channel.send('Questi sono i comandi disponibili: \ !aiuto : questo messaggio \ !date : mostra le date associative importanti \ !tavoli : mostra i tavoli di gioco del semestre');
 
        }
  
