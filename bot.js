@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
+var domanda = ''; 
 var risposta = ''; 
 
 client.on('ready', () => {
@@ -15,7 +16,8 @@ client.on('ready', () => {
 client.on('message', message => {
     risposta = '';    
     
-    if (message.content.search('/r') >0) {
+    domanda = message.content;
+    if (domanda.search('/r') >=0) {
        message.reply('Che dado devo tirare?');
      }
     
