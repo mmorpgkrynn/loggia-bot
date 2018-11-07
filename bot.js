@@ -14,8 +14,12 @@ client.on('ready', () => {
 
 client.on('message', message => {
     risposta = '';    
+    
+    if (message.content === '/r') {
+       message.reply('Che dado devo tirare?');
+     }
+    
     if (message.content === '!ping') {
-
        message.reply('pong');
      }
  
