@@ -17,7 +17,7 @@ client.on('message', message => {
     risposta = '';    
     
     domanda = message.content;
-    if (domanda.search('/r') >=0) {
+    if (domanda.search('/r') == 0) {
         var nD = 0;
         var tD = 0;
         var dadi = domanda.substring(2);
@@ -30,10 +30,26 @@ client.on('message', message => {
         }
         else {
          var valoreF = 0;
+         var tiroF = 0;
+         var sequenza = '';
          for (i = 0; i < nD; i++) {
-             valoreF += Math.floor(Math.random() * tD) + 1;
+             tiroF = Math.floor(Math.random() * tD) + 1;
+             valoreF += tiroF;
+             if (dadi.search('!') > 0) {
+                 //voglio anche la sequenza dei tiri
+                 if (i == 0) {
+                  sequenza += tiroF.toString();
+                 }
+                 else {
+                  sequenza += ',' + tiroF.toString();
+                 }
+             }
          }           
-         message.reply(valoreF.toString()+ ' [ho tirato: '+ nD.toString() + ' dadi da '+ tD.toString()+']');
+         if (sequenza != '')
+         {
+             sequenza = '\n (' + sequenza + ')';
+         }
+         message.reply('hai tirato: '+ valoreF.toString() + ' [con '+ nD.toString() + ' dadi da '+ tD.toString()+']' + sequenza);
         }
             
      }
