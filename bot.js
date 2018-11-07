@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
- 
+var risposta = ''; 
 
 client.on('ready', () => {
 
@@ -13,8 +13,7 @@ client.on('ready', () => {
  
 
 client.on('message', message => {
-
-    var risposta = '';
+    risposta = '';    
     if (message.content === '!ping') {
 
        message.reply('pong');
