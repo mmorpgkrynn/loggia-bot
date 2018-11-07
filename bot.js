@@ -22,7 +22,7 @@ client.on('message', message => {
  
      if (message.content === '!aiuto') {
 
-       message.send('Questi sono i comandi disponibili:');
+       message.channel.send('Questi sono i comandi disponibili:');
 
        }
  
