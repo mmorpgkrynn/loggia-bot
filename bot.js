@@ -19,6 +19,18 @@ client.on('message', message => {
        message.reply('pong');
 
        }
+ 
+     if (message.content === '!aiuto') {
+
+       message.send('Questi sono i comandi disponibili:');
+
+       }
+ 
+     if ((message.content === 'loggia')||(message.content === 'Loggia')) {
+
+       message.reply('Sono il bot della Loggia, se vuoi puoi utilizzarmi usando il prefisso !<comando>, ad esempio !aiuto');
+
+       }
 
 });
 
