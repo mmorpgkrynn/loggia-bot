@@ -23,11 +23,22 @@ client.on('message', message => {
      if (message.content === '!aiuto') {
 
        message.channel.send('Questi sono i comandi disponibili: \
-                            !aiuto : questo messaggio \
-                            !date : mostra le date associative importanti \
-                            !tavoli : mostra i tavoli di gioco del semestre');
+!aiuto : questo messaggio \
+!date : mostra le date associative importanti \
+!tavoli : mostra i tavoli di gioco del semestre');
 
        }
+
+      if (message.content === '!date') {
+       message.channel.send('Prossimi appuntamenti: \
+');
+      }
+ 
+      if (message.content === '!tavoli') {
+       message.channel.send('Tavoli di questo semestre: \
+');
+      }
+ 
  
      if ((message.content === 'loggia')||(message.content === 'Loggia')) {
 
