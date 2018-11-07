@@ -25,6 +25,8 @@ client.on('message', message => {
         var diviso = dadi.split('D'); 
         if (isNaN(diviso[0]) == false) nD = parseInt(diviso[0]);
         if (isNaN(diviso[1]) == false) tD = parseInt(diviso[1]);        
+        var diviso2 = diviso[1].split('!'); 
+        if (tD == 0) tD = diviso2[0];
         if ((nD == 0) || (tD ==0)) {
          message.reply('Che dadi devo tirare? (La sintassi è xDy)');
         }
