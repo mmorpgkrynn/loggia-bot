@@ -21,14 +21,19 @@ client.on('message', message => {
         var nD = 0;
         var tD = 0;
         var dadi = domanda.substring(2);
-        var diviso = dadi.split('d'); 
+        dadi = dadi..toUpperCase();
+        var diviso = dadi.split('D'); 
         if (isNaN(diviso[0]) == false) nD = parseInt(diviso[0]);
         if (isNaN(diviso[1]) == false) tD = parseInt(diviso[1]);        
         if ((nD == 0) || (tD ==0)) {
-         message.reply('Che dadi devo tirare? (La sintassi è xdy)');
+         message.reply('Che dadi devo tirare? (La sintassi è xDy)');
         }
         else {
-         message.reply('Tiro: '+ nD.toString() + ' dadi da '+ tD.toString());
+         var valoreF = 0;
+         for (i = 0; i < nD; i++) {
+             valoreF += Math.floor(Math.random() * tD) + 1;
+         }           
+         message.reply(valoreF.toString()+ ' [ho tirato: '+ nD.toString() + ' dadi da '+ tD.toString()+']');
         }
             
      }
