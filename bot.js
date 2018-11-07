@@ -14,6 +14,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
 
+    var risposta = '';
     if (message.content === '!ping') {
 
        message.reply('pong');
@@ -22,7 +23,8 @@ client.on('message', message => {
  
      if (message.content === '!aiuto') {
 
-       message.channel.send('Questi sono i comandi disponibili: \n !aiuto : questo messaggio \n !link : collegamenti utili \n !date : mostra le date associative importanti \n !tavoli : mostra i tavoli di gioco del semestre');
+       risposta = 'Questi sono i comandi disponibili: \n !aiuto : questo messaggio \n !link : collegamenti utili \n !date : mostra le date associative importanti \n !tavoli : mostra i tavoli di gioco del semestre';
+       message.channel.send(risposta);
 
        }
 
