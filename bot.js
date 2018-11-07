@@ -49,6 +49,7 @@ client.on('message', message => {
         '!link : collegamenti utili \n' +
         '!date : mostra le date associative importanti \n'+
         '!tavoli : mostra i tavoli di gioco del semestre \n'+
+        '/r xDy : tiro [x] dadi da [y] facce \n'+
         '';
        message.channel.send(risposta);
 
