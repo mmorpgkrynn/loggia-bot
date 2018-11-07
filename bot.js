@@ -21,7 +21,7 @@ client.on('message', message => {
         var nD = 0;
         var tD = 0;
         var dadi = domanda.substring(2);
-        dadi = dadi..toUpperCase();
+        dadi = dadi.toUpperCase();
         var diviso = dadi.split('D'); 
         if (isNaN(diviso[0]) == false) nD = parseInt(diviso[0]);
         if (isNaN(diviso[1]) == false) tD = parseInt(diviso[1]);        
