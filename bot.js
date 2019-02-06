@@ -83,18 +83,20 @@ client.on('message', message => {
  
  
       if (message.content === '!date') {
-       risposta = 'Prossimi appuntamenti: \n'+
-        '30/11/2018: Cena Associativa \n'+
-        '21/12/2018: Seconda Riunione associativa \n'+
+       risposta = 'Prossimi appuntamenti 2019: \n'+
+        '29/03/2019: Cena Associativa \n'+
+        '26/07/2019: Prima Riunione associativa \n'+
+        '29/11/2019: Cena Associativa \n'+
+        '20/12/2019: Seconda Riunione associativa \n'+
         '';
        message.channel.send(risposta);
       }
  
       if (message.content === '!tavoli') {
-       risposta = 'Tavoli di questo semestre (09/2018 - 12/2018): \n'+
-        'Venerdì A - Sine Requie | Star Trek \n'+
-        'Venerdì B - Gnosis | The Wild Hell of the West \n'+
-        'Sabato - Dungeons & Dragons 5ed. | Tavolo libero \n'+
+       risposta = 'Tavoli di questo semestre (Febbraio - Luglio 2019): \n'+
+        'Venerdì A - Mekton Z | Rolemaster \n'+
+        'Venerdì B - Pathfinder | Avventure ad Hogwarts \n'+
+        'Sabato - Sine Requie | Tavolo libero \n'+
         '';
        message.channel.send(risposta);      
       }
