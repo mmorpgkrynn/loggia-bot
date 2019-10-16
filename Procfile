@@ -1,1 +1,1 @@
-worker: node bot.js
+web: vendor/bin/heroku-php-apache2 /
